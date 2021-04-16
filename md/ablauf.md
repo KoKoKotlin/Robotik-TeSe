@@ -42,5 +42,9 @@
     - Testen der Bibliotheken
     - Testen der Funktionalität der Sensoren (so weit wie möglich)
     - Implementierung Datenformate in ROS
-* 5 Wochen:
-    - Implementierung von Filterungalgorithmen
+* 4 Wochen:
+    - Implementierung von Filterungsalgorithmen für Daten
+    - Verarbeitung der Daten in das vereinbarte Format
+* 2 Woche:
+    - Integration des Projekt in den Husky
+    - gegebenefalls Fehler/Bugs beheben
