@@ -1,5 +1,5 @@
 # Motivation
-* Roboter der über Freiberger Campus fahren soll
+* Roboter, der über Freiberger Campus fahren soll
     - sinnvolle Navigation
     - beachten von Hindernissen wie Menschen oder Schlaglöchern
     - mögliches erkennen von Fehlern in anderen Bereichen (Roboter soll Bspw nicht simple gegen eine Wand fahren)
