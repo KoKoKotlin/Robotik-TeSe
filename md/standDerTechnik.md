@@ -2,13 +2,13 @@
 
 ## LiDAR Sensor 
 
-* 2D LiDAR Sensor TiM551
-![previewer](./Lidar/LidarTim551Drawing.png)
+* 2D LiDAR Sensor TiM551 <br>
+![LiDAR](/Lidar/LidarTim551Drawing.png)
 * ROS package: https://github.com/SICKAG/sick_scan
 * ROS2 package: https://github.com/SICKAG/sick_scan2
 
 ### <u>Ausgabebeispiel:</u>
-![previewer](./Lidar/Lidar-OutputExample.png)
+![Example](/Lidar/Lidar-OutputExample.png)
 * drei Echos des Lasers
 * zwischen -45° und 225°
 * sendet Distanz in Gradintervallen (im Beispiel je 0.25° eine Entfernung)
