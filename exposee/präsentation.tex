@@ -1,24 +1,36 @@
 \documentclass{beamer}
 
 \usepackage[utf8]{inputenc}
-\usepackage{tikz}
 
 \usetheme{Madrid}
 \usecolortheme{seahorse}
 \usefonttheme{structuresmallcapsserif}
+\setbeamercovered{dynamic}
 
 \title{Exposée Sensorik}
 \author[Y. Höll, G. Muck, C. Pooch, G. N. Tchapda]
 	{Yannik~Höll \\ \and Georg~Muck \\ \and Christoph~Pooch \\ \and  Gwladys Noutep Tchapda}
 \date{22.04.2021}
-\logo{\includegraphics[width=30px, height=30px]{TUBAF-logo.png}}
+\logo{\includegraphics[]{TUBAF-logo.png}}
+
 
 \beamertemplatenavigationsymbolsempty 
 
 \begin{document}
 	\frame{\titlepage}
 
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 
+\section{Motivation}
 \begin{frame}
 \frametitle{Motivation}
 \begin{itemize}
@@ -26,24 +38,26 @@
 \begin{itemize}
 \item<2-4> sinnvolle Navigation
 \item<3-4> beachten von Hindernissen wie Menschen oder Schlaglöchern
-\item<4> ggf erkennen v on Fehlern in anderen Bereichen
+\item<4> ggf erkennen von Fehlern in anderen Bereichen
 \end{itemize}
 
 \item<5-> akkurate \alert<6->{Aufnahme}, \alert<6->{Verarbeitung} und (durch \alert<6->{Verarbeitung}) sinnvolle \alert<6->{Bereitstellung} der Sensordaten
 \end{itemize}
 \end{frame}
 
- \begin{frame}
-\frametitle{ Organisation \& Ablauf}
+
+\section{Organisation \& Ablauf}
+\begin{frame}
+\frametitle{Organisation \& Ablauf}
 \begin{itemize}
 \item<1-> \alert{Meeting} am Anfang und am Ende der "Arbeitswoche"
-\item<2-> Aufgaben zu geregelten Zeiten Erledigen
+\item<2-> Aufgaben zu geregelten Zeiten erledigen
 \item<3-> feste \alert{Verbindlichkeiten}
 \item<4-> Kommunikation via \alert{Discord} und Datenaustausch via \alert{GitHub}
 \end{itemize}
 \end{frame}
 
- \begin{frame}
+\begin{frame}
 \frametitle{Organisation \& Ablauf}
 \begin{itemize}
 \item<1-> Vorbereitung
