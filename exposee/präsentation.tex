@@ -13,7 +13,6 @@
 \date{22.04.2021}
 \logo{\includegraphics[]{TUBAF-logo.png}}
 
-
 \beamertemplatenavigationsymbolsempty 
 
 \begin{document}
@@ -29,6 +28,11 @@
   \vfill
   \end{frame}
 }
+
+\begin{frame}
+\frametitle{Einteilung}
+\tableofcontents
+\end{frame}
 
 \section{Motivation}
 \begin{frame}
@@ -60,23 +64,36 @@
 \begin{frame}
 \frametitle{Organisation \& Ablauf}
 \begin{itemize}
-\item<1-> Vorbereitung
+\item<1-> Vorbereitung (Woche 1 - 2)
 \begin{itemize}
-\item<2-3> Definieren des Problems
-\item<3> Kommunikation mit anderen Gruppen
+\item<2-6> Definieren des Problems
+\item<3-6> Recherche Sensoren
+\item<4-6> Sichten Bibliotheken
+\item<5-6> Erstellen UML-Klassendiagramme
+\item<6> Festlegung Zugriffsverfahren
 \end{itemize}
-\item<4-> Recherche \& Planung
+\item<7-> Recherche \& Planung (Woche 3 - 6)
 \begin{itemize}
-\item<5-8> Recherchieren der benötigten Mittel
-\item<6-8> Ablaufpläne \& UML-Klassendiagramm erstellen
-\item<7-8> Analysieren der GitHub-Bibliotheken
-\item<8> Ansätze/Ideen der Integration
+\item<8-11> Grobe Implementierung Sensoren
+\item<9-11> Testen Bibliotheken
+\item<10-11> Testen Sensoren
+\item<11> Implementierung Datenformate in ROS
 \end{itemize}
- \item<9-> Umsetzung
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Organisation \& Ablauf}
 \begin{itemize}
-\item<10-12> Schreiben der einzelnen Nodes \& Eigenschaften
-\item<11-12> grobe Implementierung aller Sensoren
-\item<12> Verfeinerung
+\item<1-> Verfeinerung (Woche 7 - 11)
+\begin{itemize}
+\item<2-3> Implementierung Filterungsalgorithmen
+\item<3> Verarbeitung der Daten in das vereinbarte Format
+\end{itemize}
+\item<4-> Integration (Woche 12 - 14)
+\begin{itemize}
+\item<5-6> Integration in Husky
+\item<6> gegebenenfalls Bugs beheben
 \end{itemize}
 \end{itemize}
 \end{frame}
