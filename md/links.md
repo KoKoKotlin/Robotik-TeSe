@@ -14,5 +14,5 @@
 * ROS2: https://github.com/SICKAG/sick_scan2
 
 ## GNSS:
-- HOLDER -
+* https://www.navilock.de/produkte/G_62523/faq.html
 
