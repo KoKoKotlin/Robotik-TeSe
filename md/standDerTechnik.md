@@ -1,5 +1,8 @@
 # Stand der Technik
 
+## Odometrie
+* laut User Manual des Husky bereits nativ im System integriert (Ros Topic)
+
 ## LiDAR Sensor 
 
 * 2D LiDAR Sensor TiM551 <br>
@@ -21,3 +24,4 @@
 * bis zu 72 Satelliten gleichzeitig
 * Treiber für Linux und Windows verfügbar (keine ROS packages)
 * C#/C++/VB unterstützt für Entwicklung und Integration
+
