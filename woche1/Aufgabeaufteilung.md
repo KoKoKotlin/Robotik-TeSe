@@ -32,3 +32,5 @@
 ### Node, Action, Service:
     - Aufgabe: Node, Action, Service Recherche, (was für welchen Sensor geeignet)
     - bearbeitet von: Georg
+
+<strong style="color: red;">nächstes Meeting am:</strong> Dienstag, 14.00 - 15.30
