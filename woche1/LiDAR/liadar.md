@@ -31,7 +31,7 @@
 - ROS1: https://github.com/SICKAG/sick_scan
 - Installation: https://github.com/SICKAG/sick_scan#installation
 
-- Node starten: `roslaunch sick_scan sick_tim_511.launch`
+- Node starten: `roslaunch sick_scan sick_tim_5xx.launch`
 
 - grafische Darstellung mit `rviz`
 
@@ -53,7 +53,7 @@
 - ROS2: https://github.com/SICKAG/sick_scan2
 - Installation: https://github.com/SICKAG/sick_scan2#installation
 
-- Node starten: `ros2 launch sick_scan2 sick_lms_51.launch.py`
+- Node starten: `ros2 launch sick_scan2 sick_lms_5xx.launch.py`
 
 - grafische Darstellung mit `rviz2`
 
