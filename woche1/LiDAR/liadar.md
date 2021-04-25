@@ -46,6 +46,12 @@
 | intensity_resolution_16bit | -                 | Toggle 16bit/8bit Auflösung Intensität |
 | cloud_topic                | -                 | Topicname für point clound data        |
 
+##### topics:
+- /cloud ([sensor_msgs/msg/PointCloud2](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/PointCloud2.html))
+- /imu ([sensor_msgs/msg/Imu](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Imu.html)) <sup>1</sup>
+- /scan ([sensor_msgs/msg/LaserScan](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/LaserScan.html)) <sup>2</sup>
+
+
 ### ROS2:
 
 #### sick_scan2 (Treiber)
@@ -57,7 +63,17 @@
 
 - grafische Darstellung mit `rviz2`
 
+##### topics:
+- /cloud ([sensor_msgs/msg/PointCloud2](http://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/PointCloud2.html))
+- /imu ([sensor_msgs/msg/Imu](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Imu.html)) <sup>1</sup>
+- /scan ([sensor_msgs/msg/LaserScan](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/LaserScan.html)) <sup>2</sup>
+
 ## Ideen:
 
 - Kalibration Kamera/LiDAR? (https://github.com/ankitdhall/lidar_camera_calibration)
 - Object - Tracking (https://github.com/praveen-palanisamy/multiple-object-tracking-lidar)
+
+
+### Fußnoten:
+[1]: Internal measurment unit (Geometrie, Geschwindigkeitsinformationen)
+[2]: Single Scan from Sensor (Rohdaten)
