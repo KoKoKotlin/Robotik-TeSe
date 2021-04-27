@@ -6,4 +6,5 @@
     * Publisher - Subscriber - Prinzip (wahrscheinlich relativ wenig Verarbeitungsaufwand und Informationen sind sehr wichtig/ausschlaggebend)
 
 ## Odometrie
-    * PubSub oder Action?
+    * Ist vollständig Vorgegeben
+    * nutzen um Realismus, bzw Wahrheit des Outputs vom GNSS zu Prüfen
