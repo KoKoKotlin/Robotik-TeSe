@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage[final]{pdfpages}
+\usepackage{graphicx}
+\usepackage{xcolor}
+%\usepackage[ngerman]{babel}
+\usepackage{times}
+\title{Global Navigation Satellite Systems (GNSS)}
+%\author{Gwladys Noutep Tchapda}
+\begin{document}
+
+\emph{\textbf{\large{Global Navigation Satellite Systems (GNSS)}}}
+\\(Positionsbestimmung mittels GNSS)
+\\ \\
+  Ein globales Navigationssatellitensystem (englisch Global Navigation Satellite System) oder \textbf{GNSS} ist ein System zur Positionsbestimmung und Navigation auf der Erde und in der Luft durch den Empfang der Signale von Navigationssatelliten und Pseudoliten. 
+
+
+\section{Messprinzip}
+\paragraph{}
+Was für die Seefahrer früher Zeiten ein Traum war, ist heute Realität: Metergenaue Standortbestimmung auf der ganzen Welt. Dahinter stecken satellitengestützte Navigationssysteme wie GPS (USA), GLONASS (Russland), Galileo (Europa) und Beidou/Compass (China).\\
+\textbf{Das Grundprinzip von GPS} setzt voraus, dass von einem Empfänger auf der Erdoberfläche sogenannte Pseudostrecken (engl. pseudoranges) zu mindestens 4 Satelliten gleichzeitig ermittelt werden. Pseudostrecken setzen sich zusammen aus der wahren Strecke vom Empfänger bis zum Satelliten plus einem konstanten Wert "k". Kennt man die Positionen der Satelliten, so kann durch eine Art "Bogenschlag" die Position des Empfängers festgelegt werden. \\ \\Die Satellitenpositionen werden durch sogenannte Ephemeriden (Bahndaten) beschrieben, die fortlaufend aus Beobachtungen von Bodenstationen gewonnen und entsprechend in die Zukunft prädiziert werden müssen. Voraussetzung dazu ist, dass sowohl das Gravitationsfeld der Erde, in dem der Satellit sich bewegt, als auch dass die Drehbewegungen der Erde bekannt sind.
+
+\paragraph{}
+Die Pseudostreckenmessung läuft auf eine Messung der Signallaufzeit hinaus. Hierbei sendet der Satellit codierte, zeitlich getaktete Signale aus, die ein Empfänger am Boden registrieren, decodieren und zeitlich einordnen kann. Da jedoch der Bodenempfänger zunächst nicht zeitlich mit der Satellitenzeit synchronisiert ist, ist die Laufzeit um den Uhrstand zwischen der Satellitenzeit und der Empfängerzeit verfälscht. Werden die Signale von mindestens 4 Satelliten empfangen, kann der Uhrenfehler des Empfängers und damit die Konstante "k" mitbestimmt werden.
+
+\begin{figure}
+	\centering
+	\includegraphics[width 5.0in]{/home/noutep/Bureau/stockage_ouvert/GNSS-Messprinzip.jpg}
+	\caption{Messprinzip Global Navigation Satellite Systems (GNSS)}
+	\label{messprinzip}
+\end{figure}\\ \\
+\section{Messfehlern}
+Fehler, die die Genauigkeit der Positionierung durch GPS / GNSS-Methoden beeinträchtigen hängen zusammen : \\
+
+\begin{itemize}
+\item Das Signal wird während seines Durchgangs durch die Atmosphäre auf variable Weise verlangsamt.
+
+\item Das Signal ist möglicherweise blockiert und erreicht den Empfänger in Städten aufgrund von Bäumen, Brücken, Tunneln usw. nicht.
+\item Das Signal kann von Elementen auf dem Boden (Metalloberflächen, Fenster, Gebäude usw.) reflektiert werden.
+
+\item Fehler, die sich auf die Entfernungsmessung zwischen den verschiedenen Satelliten und dem Empfänger des Benutzers auswirken
+
+\end{itemize}
+ \textbf{LINKS}\\
+ \begin{enumerate}
+ \item \href{https://github.com/Fraunhofer-IIS/gnss}{\textcolor{blue}{linkGithup}}
+ \item \href{https://docs.ros.org/en/kinetic/api/sensor_msgs/html/msg/NavSatFix.html}{\textcolor{blue}{linkSensorMsgsBsp}}
+ \item \href{https://github.com/septentrio-gnss/septentrio_gnss_driver}{\textcolor{blue}{linkGithupHelpToUnderstandGnssManipulationDataWith-ROS}}
+ \item \begin{document}
+ \href{run:d:/home/noutep/Bureau/ros-extra-2.pdf}{beispielHuskyGNSS}
+ \end{document}
+ \end{document}
+ \end{enumerate}
+
+
+
+
+
+\end{document}
