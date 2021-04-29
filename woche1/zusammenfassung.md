@@ -75,7 +75,7 @@ Fehler, die die Genauigkeit der Positionierung durch GPS / GNSS-Methoden beeintr
 |Topic                         | Sources               | Description                               |
 |------------------------------|-----------------------|-------------------------------------------|
 |husky_velocity_controller/odom| husky_node            | Raw odometry as read from Husky encoders  |
-|imu/data                      |	mu_filter_madgwick | Orientation estimate from the IMU         |
+|imu/data                      | mu_filter_madgwick    | Orientation estimate from the IMU         |
 | odometry/filtered            | ekf_localization_node | Fused odometry estimate (encoders and IMU)|
 
 
