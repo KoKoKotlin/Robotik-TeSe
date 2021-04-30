@@ -1,3 +1,13 @@
+---
+title: "Zusammenfassung"
+author: "Christoph Paul Pooch"
+header-includes:
+   - \usepackage{pdflscape}
+output:
+    pdf_document
+---
+
+\begin{landscape}
 # Bericht der Woche 22.4. - 29.4.
 
 # LiDAR
@@ -89,3 +99,4 @@ string child_frame_id
 geometry_msgs/PoseWithCovariance pose
 geometry_msgs/TwistWithCovariance twist
 ```
+\end{landscape}
