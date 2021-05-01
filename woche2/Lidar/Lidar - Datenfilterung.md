@@ -21,4 +21,14 @@
     * Steigungsmaximum:
         - siehe Punkt-Punkt-Beziehung
     * Blockminimum:
-        "- [...] basiert auf Horizontalem Untergrund und betrachtet, ob Pkte innerhalb oder ausserhalb einer bestimmten Pufferdistanz, dem sogenannten Blockminimum, über dem Gelände positioniert ist"
+        - "[...] basiert auf horizontalem Untergrund und betrachtet, ob Pkte innerhalb oder ausserhalb einer bestimmten Pufferdistanz, dem sogenannten Blockminimum, über dem Gelände positioniert ist"
+    * Oberflächenapproximation:
+        - wie Blockminimum nur ohne Vorraussetzung des horizontalen Untergrund (dann kein richtiger Bock mehr, eher eine 4-eckige Schlange)
+    * Clusterbildung/Segmentierung:
+        - Idee: Clusterpkt gehören Objekt an und müssen daher weggefiltert werden
+
+## im Unterschied zum Paper
+    * im Paper:
+        - Bodenrelief soll aufgenommen werden, dazu Objekte wie Bäume usw raus Filtern
+    * wir:
+        - erstes Hinderniss soll aufgenommen werden (Dinge dahinter ggf raus Filtern)
