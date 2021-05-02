@@ -1,0 +1,4 @@
+- nmea interface: http://aprs.gids.nl/nmea/
+- ubxtool für Config
+- Config doc: https://gpsd.io/ubxtool-examples.html
+- Daten aus ttyACM0 holen
