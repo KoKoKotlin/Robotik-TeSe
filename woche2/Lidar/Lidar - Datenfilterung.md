@@ -43,5 +43,17 @@
     * Histogrammfilter (maybe unser wtg, da sehr effizient)
 
 ## mgl Implementierungen
-    * ros: http://wiki.ros.org/laser_filters
-    * ros2: https://github.com/ros2/message_filters
+    * ros: 
+        - http://wiki.ros.org/multi_object_tracking_lidar [1]
+        - http://wiki.ros.org/laser_filters
+        - relevant? https://github.com/intel/ros2_object_analytics/blob/devel/README.md
+    * ros2:
+        - relevant? https://github.com/ros2/message_filters
+
+### [1] (multi_object_tracking_lidar):
+* ROS (implemented in C++)
+* Paket um mehrere Objekte zu erkenne (& zu Clustsern), tracken und klassifizieren von LIDAR-scans und PointClouds (PC)
+* K-D-Baum-basierte PC-Verarbeitung zum Erkennung von Objektmerkmalen aus PC's
+* nutzt K-Means fürs Clustering und Kalmand-Filter
+* https://github.com/praveen-palanisamy/multiple-object-tracking-lidar
+* Zitierungsangaben nicht vergessen
