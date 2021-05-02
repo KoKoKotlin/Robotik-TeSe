@@ -9,11 +9,8 @@ def main():
     ydiff = max(lat) - min(lat)
 
     im = plt.imread("map_spansberg.png")
-    ax.imshow(im, extent=[min(lon) - xdiff * 0.01, max(lon), min(lat) - ydiff * 0.04, max(lat) + ydiff * 0.035])
-    ax.scatter(lon, lat, marker="o", s=2)
-    
-    figManager = plt.get_current_fig_manager()
-    figManager.resize(*figManager.window.maxsize())
+    ax.imshow(im, extent=[13.385437, 13.398942, 51.417562, 51.432451])  # exact values taken from google maps
+    ax.scatter(lon, lat, marker="o", s=1)
     
     plt.show()
 
