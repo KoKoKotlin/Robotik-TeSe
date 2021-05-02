@@ -13,7 +13,7 @@ with open(f"data_{file_suffix}.txt", "w") as f:
 
 msg_count = 0
 
-while msg_count < 1000:
+while msg_count < 500:
     try:
         line = sio.readline()
         msg = pynmea2.parse(line)
