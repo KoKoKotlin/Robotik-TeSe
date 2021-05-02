@@ -54,6 +54,6 @@
 * ROS (implemented in C++)
 * Paket um mehrere Objekte zu erkenne (& zu Clustsern), tracken und klassifizieren von LIDAR-scans und PointClouds (PC)
 * K-D-Baum-basierte PC-Verarbeitung zum Erkennung von Objektmerkmalen aus PC's
-* nutzt K-Means fürs Clustering und Kalmand-Filter
+* nutzt K-Means fürs Clustering und Kalman-Filter
 * https://github.com/praveen-palanisamy/multiple-object-tracking-lidar
 * Zitierungsangaben nicht vergessen
