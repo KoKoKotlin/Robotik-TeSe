@@ -1,3 +1,15 @@
+# Usage:
+# 1. Install docker with apt
+# 2. Add yourself to the docker group so that you don't need sudo
+# 3. chmod +x ros_entrypoint.sh && chmod +x setup_gnss.sh
+# 4. docker build . in the dir of the Dockerfile
+# 5. docker images => look up the image id of the newly built image
+# 6. docker run --device=/dev/ttyACM0 -it --entrypoint=/bin/bash image_id (make sure that the gnss receiver is connected to the pc)
+# => now you should have a console in the docker container and can execute the setup_gnss.py and read_serial.py
+# if you get a permission denied for the device file run the following command on the host: sudo chmod -r 777 /dev/ttyACM0
+# To exit the container CTRL+C + CTRL+D
+# For deleting all images and running containers: docker system prune -a
+
 # This is an auto generated Dockerfile for ros:ros1-bridge
 # generated from docker_images_ros2/ros1_bridge/create_ros_ros1_bridge_image.Dockerfile.em
 FROM ros:foxy-ros-base-focal
@@ -8,21 +20,17 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6
 # setup sources.list
 RUN echo "deb http://packages.ros.org/ros/ubuntu focal main" > /etc/apt/sources.list.d/ros1-latest.list
 
-ENV ROS1_DISTRO noetic
+ENV ROS_DISTRO noetic
 ENV ROS2_DISTRO foxy
 
 # install ros packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ros-noetic-ros-comm=1.15.9-1* \
-    ros-noetic-roscpp-tutorials=0.10.2-1* \
-    ros-noetic-rospy-tutorials=0.10.2-1* \
+    ros-noetic-ros-comm \
     && rm -rf /var/lib/apt/lists/*
 
 # install ros2 packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    ros-foxy-ros1-bridge=0.9.6-1* \
-    ros-foxy-demo-nodes-cpp=0.9.3-1* \
-    ros-foxy-demo-nodes-py=0.9.3-1* \
+    ros-foxy-ros1-bridge \
     && rm -rf /var/lib/apt/lists/*
 
 # setup entrypoint
@@ -39,12 +47,14 @@ RUN apt-get update \
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
   && pip3 --no-cache-dir install --upgrade pip \
-  && pip3 --no-cache-dir install gps pynmea2 pyserial
+  && pip3 --no-cache-dir install gps pynmea2 pyserial \
   && rm -rf /var/lib/apt/lists/*
 
 # setup gnss
-WORKDIR ~/
-RUN mkdir gnss && cd gnss && \
-    wget https://github.com/KoKoKotlin/Robotik-TeSe/blob/master/woche2/Sensoren/gnss/ubxtool.py \        # get the ubxsetup script
- && wget https://github.com/KoKoKotlin/Robotik-TeSe/blob/master/woche2/Sensoren/gnss/read_serial.py      # get the python script for reading the gnss receiver
- && python3 ubxtool.py -P 18 -v 2 -f /dev/ttyACM0 -p RESET                                               # reset the gnss receiver to default config
+WORKDIR home
+RUN mkdir gnss
+WORKDIR /home/gnss
+RUN wget https://raw.githubusercontent.com/KoKoKotlin/Robotik-TeSe/master/woche2/Sensoren/gnss/ubxtool.py \        
+ && wget https://raw.githubusercontent.com/KoKoKotlin/Robotik-TeSe/master/woche2/Sensoren/gnss/read_serial.py
+
+COPY ./setup_gnss.sh .
