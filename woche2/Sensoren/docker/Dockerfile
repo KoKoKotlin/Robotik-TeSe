@@ -6,7 +6,7 @@
 # 5. docker images => look up the image id of the newly built image
 # 6. docker run --device=/dev/ttyACM0 -it --entrypoint=/bin/bash image_id (make sure that the gnss receiver is connected to the pc)
 # => now you should have a console in the docker container and can execute the setup_gnss.py and read_serial.py
-# if you get a permission denied for the device file run the following command on the host: sudo chmod -r 777 /dev/ttyACM0
+# if you get a permission denied for the device file run the following command on the host: sudo chmod -R 777 /dev/ttyACM0
 # To exit the container CTRL+C + CTRL+D
 # For deleting all images and running containers: docker system prune -a
 
