@@ -1,0 +1,3 @@
+cd test/woche2/Sensoren/docker/; sudo chmod +x ros_entrypoint.sh && chmod +x setup_gnss.sh; sudo docker build .; sudo docker run --device=/dev/ttyACM0 -it --entrypoint=/bin/bash a2986441eda7;
+
+sudo docker cp 2a74a2a1a62e:/home/gnss/
