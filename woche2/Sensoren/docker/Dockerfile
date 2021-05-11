@@ -1,14 +1,15 @@
 # Usage:
-# 1. Install docker with apt
-# 2. Add yourself to the docker group so that you don't need sudo
+# 1. Install docker with apt (sudo apt-get install docker.io) and start the docker deamon (sudo systemctl start docker)
+# 2. Add yourself to the docker group so that you don't need sudo (sudo groupadd docker && sudo usermod -aG docker $USER)
 # 3. chmod +x ros_entrypoint.sh && chmod +x setup_gnss.sh
 # 4. docker build . in the dir of the Dockerfile
 # 5. docker images => look up the image id of the newly built image
-# 6. docker run --device=/dev/ttyACM0 -it --entrypoint=/bin/bash image_id (make sure that the gnss receiver is connected to the pc)
+# 6. docker run --device=/dev/ttyACM0 -it --entrypoint=/bin/bash {image_id} (make sure that the gnss receiver is connected to the pc)
 # => now you should have a console in the docker container and can execute the setup_gnss.py and read_serial.py
 # if you get a permission denied for the device file run the following command on the host: sudo chmod -r 777 /dev/ttyACM0
 # To exit the container CTRL+C + CTRL+D
 # For deleting all images and running containers: docker system prune -a
+# Example for copying from docker container: docker cp <container-id>:/path/in/container /path/in/host
 
 # This is an auto generated Dockerfile for ros:ros1-bridge
 # generated from docker_images_ros2/ros1_bridge/create_ros_ros1_bridge_image.Dockerfile.em
